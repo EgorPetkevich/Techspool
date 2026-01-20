@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  TechspoolProject
+
+  Created by George Popkich on 19.01.26.
+  
+*/
+//MARK: - Onbording
+"onboarding_start_button_title" = "INIZIA";
+"onboarding_accept_button_title" = "ACCETTA";
+"onboarding_refuse_button_title" = "RIFIUTA";
+"onboarding_first_card_description" = "Ordina a domicilio senza \n limiti di distanza. Non è\nmagia, è Moovenda!";
+"onboarding_first_card_subtitle" = "PRONTO?";
+"onboarding_second_card_description" = "Ogni tanto inviamo degli \n sconti esclusivi tramite \n notifiche push, ci stai?";
+"onboarding_second_card_subtitle" = "PROMOZIONI";
+"onboarding_third_card_description" = "Per sfruttare al massimo \n l'app, puoi condividerci la \n tua posizione?";
+"onboarding_third_card_subtitle" = "POSIZIONE";
