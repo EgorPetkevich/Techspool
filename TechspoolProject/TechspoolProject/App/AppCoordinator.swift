@@ -19,7 +19,7 @@ final class AppCoordinator: Coordinator {
     
     func startApp() {
         //MARK: uncomment for Testing
-        ParametersHelper.set(.onboardDidFinish, value: false)
+//        ParametersHelper.set(.onboardDidFinish, value: false)
         openMainModule()
     }
     
