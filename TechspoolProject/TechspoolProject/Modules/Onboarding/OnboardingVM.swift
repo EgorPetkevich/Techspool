@@ -68,6 +68,11 @@ final class OnboardingVM: OnboardingViewModelProtocol {
         coordinator.finish()
     }
     
+    func crossButtonDidTap() {
+        ParametersHelper.set(.onboardDidFinish, value: true)
+        coordinator.finish()
+    }
+    
     func numOfPages() -> Int {
         return cards.count
     }

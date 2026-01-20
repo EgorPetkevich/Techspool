@@ -16,6 +16,7 @@ protocol OnboardingViewModelProtocol {
     func startButtonDidTap()
     func acceptButtonDidTap()
     func refuseButtonDidTap()
+    func crossButtonDidTap()
 }
 
 final class OnboardingVC: UIViewController {
@@ -30,6 +31,11 @@ final class OnboardingVC: UIViewController {
         pageControl.pageIndicatorTintColor = .lightGray
         return pageControl
     }()
+    
+    private lazy var crossButton: UIButton =
+    UIButton
+    .crossButton()
+    .withAction(self, #selector(crossButtonDidTap))
     
     private lazy var startButton: StartButton =
     StartButton(
@@ -102,12 +108,18 @@ final class OnboardingVC: UIViewController {
         view.addSubview(pageControl)
         view.addSubview(startButton)
         view.addSubview(bottomContentView)
+        view.addSubview(crossButton)
         bottomContentView.addSubview(refuseButton)
         bottomContentView.addSubview(acceptButton)
         bottomContentView.isHidden = true
     }
     
     private func setupConstrains() {
+        crossButton.snp.makeConstraints { make in
+            make.size.equalTo(20)
+            make.top.equalTo(view.safeAreaLayoutGuide).inset(10)
+            make.right.equalToSuperview().inset(16)
+        }
         collectionView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).inset(30)
             make.horizontalEdges.equalToSuperview()
@@ -146,6 +158,10 @@ final class OnboardingVC: UIViewController {
     
     @objc private func refuseButtonDidTap() {
         viewModel.refuseButtonDidTap()
+    }
+    
+    @objc private func crossButtonDidTap() {
+        viewModel.crossButtonDidTap()
     }
     
     

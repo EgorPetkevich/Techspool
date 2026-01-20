@@ -24,4 +24,11 @@ extension UIButton {
         return button
     }
     
+    static func crossButton() -> UIButton {
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "xmark")!, for: .normal)
+        button.tintColor = .label
+        return button
+    }
+    
 }
